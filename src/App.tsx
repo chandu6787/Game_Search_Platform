@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import { Provider } from "@/components/ui/provider";
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "@/components/NavBar";
+import GameGrid from "./components/GameGrid";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -22,7 +22,7 @@ function App() {
         Sidebar
       </GridItem>
       <GridItem area="main" bg="lavender">
-        Main
+        <GameGrid />
       </GridItem>
     </Grid>
   );
