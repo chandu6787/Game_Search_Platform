@@ -9,17 +9,18 @@ function App() {
   return (
     <Grid
       templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
-
-        templateColumns={{ base: "1fr", lg: "200px 1fr" }}
-
+      templateColumns={{ base: "1fr", lg: "200px 1fr" }}
     >
-      <GridItem area="nav" bg="coral">
+      <GridItem area="nav" bg="white">
         <NavBar />
       </GridItem>
-        <GridItem area="aside" bg="lightblue"   display={{ base: "none", lg: "block" }}
->
-          Sidebar
-        </GridItem>
+      <GridItem
+        area="aside"
+        bg="lightblue"
+        display={{ base: "none", lg: "block" }}
+      >
+        Sidebar
+      </GridItem>
       <GridItem area="main" bg="lavender">
         Main
       </GridItem>
