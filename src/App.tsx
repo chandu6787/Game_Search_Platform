@@ -11,14 +11,10 @@ function App() {
       templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
       templateColumns={{ base: "1fr", lg: "200px 1fr" }}
     >
-      <GridItem area="nav" bg="white">
+      <GridItem area="nav" bg="darkgray">
         <NavBar />
       </GridItem>
-      <GridItem
-        area="aside"
-        bg="lightblue"
-        display={{ base: "none", lg: "block" }}
-      >
+      <GridItem area="aside" bg="blue" display={{ base: "none", lg: "block" }}>
         Sidebar
       </GridItem>
       <GridItem area="main" bg="lavender">
