@@ -11,13 +11,13 @@ function App() {
       templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
       templateColumns={{ base: "1fr", lg: "200px 1fr" }}
     >
-      <GridItem area="nav" bg="darkgray">
+      <GridItem area="nav" >
         <NavBar />
       </GridItem>
-      <GridItem area="aside" bg="blue" display={{ base: "none", lg: "block" }}>
+      <GridItem area="aside" display={{ base: "none", lg: "block" }}>
         Sidebar
       </GridItem>
-      <GridItem area="main" bg="lavender">
+      <GridItem area="main" >
         <GameGrid />
       </GridItem>
     </Grid>
