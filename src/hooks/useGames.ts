@@ -3,6 +3,7 @@ import { useState } from "react";
 import apiClient from "../services/api-client";
 import useData from "./useData";
 import { Genre } from "./useGenres";
+import { GamesQuery } from "@/App";
 export interface Platform {
   id: number;
   name: string;
@@ -17,13 +18,12 @@ export interface Game {
 }
 
 const useGames = (
-  selectedGenre: Genre | null,
-  selectedPlatform: Platform | null,
+  gameQuery: GamesQuery
 ) =>
   useData<Game>(
     "/games",
-    { params: { genres: selectedGenre?.id, parent_platforms: selectedPlatform?.id } },
-    [selectedGenre?.id, selectedPlatform?.id],
+    { params: { genres: gameQuery.genre?.id, parent_platforms: gameQuery.platform?.id } },
+    [gameQuery.genre?.id, gameQuery.platform?.id],
   );
 
 export default useGames;
